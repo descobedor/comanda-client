@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { FaConciergeBell, FaFileInvoiceDollar, FaTimesCircle } from "react-icons/fa";
-import { QRCodeCanvas } from "qrcode.react";
 import { useUuid } from "./UuidContext";
 import "./App.css";
+import ShareQR from "./ShareQR";
 
 const WS_BASE = "wss://signaling-server-z9az.onrender.com";
 const APP_URL = "https://comanda-client.vercel.app";
@@ -208,14 +208,16 @@ function MainApp() {
       {uuid && (
         <div className="qr-share">
           <h3>Comparte esta mesa</h3>
-          <QRCodeCanvas
+
+        <ShareQR 
             value={`${APP_URL}/join/${uuid}`}
-            size={200}
+            size={200} 
             bgColor="#ffffff"
             fgColor="#000000"
             includeMargin={true}
-          />
-          <p>{`${APP_URL}/join/${uuid}`}</p>
+            />
+          
+    
         </div>
       )}
     </div>
