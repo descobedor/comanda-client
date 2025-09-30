@@ -5,7 +5,7 @@ import "./App.css";
 import ShareQR from "./ShareQR";
 
 const WS_BASE = "wss://signaling-server-z9az.onrender.com";
-const APP_URL = "https://comanda-client.vercel.app";
+const APP_URL = "https://comanda-client-six.vercel.app";
 
 
 function MainApp() {
